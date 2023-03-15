@@ -1,0 +1,11 @@
+ion-card-content{
+  & div.rating{
+  text-align: center;
+  font-size: 45px;
+  }
+  & div.notes{
+    margin-top: 10px;
+    font-size: 25px;
+  }
+}
+

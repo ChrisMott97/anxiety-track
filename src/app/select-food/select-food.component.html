@@ -1,0 +1,18 @@
+<ion-card mode="ios">
+  <ion-card-header>
+    <ion-card-title> Food </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+      <div class="all">
+        <ion-chip color="tertiary"><ion-label>Add</ion-label><ion-icon name="add"></ion-icon></ion-chip>
+      <ion-chip (click)="select(i)" *ngFor="let food of foods; index as i;" color="primary">{{ food }}</ion-chip>
+    </div>
+    <hr />
+    <div class="selected" *ngIf="selected.length > 0">
+        <p>Selected:</p>
+      <ion-chip (click)="unselect(i)" *ngFor="let food of selected; index as i;" color="tertiary">{{
+        food
+      }}</ion-chip>
+    </div>
+  </ion-card-content>
+</ion-card>

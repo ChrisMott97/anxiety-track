@@ -1,0 +1,22 @@
+<ion-card mode="ios">
+    <ion-card-header>
+        <ion-card-title>
+            Discomfort Level
+        </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <div class="rating">
+            
+            <span *ngFor="let item of ratings; index as i;" (click)="this.highlight(i)">{{item}}</span>
+            <!-- <span>🤨</span>
+            <span>😣</span>
+            <span>🥴</span>
+            <span>😭</span> -->
+            <!-- <span>✅ 😊</span> -->
+        </div>
+        <div class="notes" *ngIf="highlightedRating !== -1">
+            <ion-textarea rows="1" placeholder="How ya feeling?"></ion-textarea>
+            <p (click)="clear()">Clear</p>
+        </div>
+    </ion-card-content>
+</ion-card>
